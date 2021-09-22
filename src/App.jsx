@@ -25,11 +25,15 @@ const quotes = [
 
 function App() {
   const [currQuote, setCurrQuote] = useState(1);
-
+  /*
+    ok ok ok this website is where this proof of concept is from
+  */
   return (
     <div className="App">
       <QuoteContext.Provider value={{ quotes, currQuote, setCurrQuote }}>
+        {/* parent */}
         <SplitPane className="split-pane-row">
+          {/* \left */}
           <SplitPaneLeft>
             <SplitPane className="split-pane-col">
               <SplitPaneTop />
@@ -37,8 +41,9 @@ function App() {
               <SplitPaneBottom />
             </SplitPane>
           </SplitPaneLeft>
+          {/* diviver */}
           <Divider className="separator-col" />
-
+          {/* right */}
           <SplitPaneRight />
         </SplitPane>
       </QuoteContext.Provider>
